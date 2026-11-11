@@ -1,0 +1,39 @@
+{
+  "limitations": "Observational differences do not establish patch causality.",
+  "minimum_samples_per_cohort": 3,
+  "regions": [
+    {
+      "after_count": 3,
+      "before_count": 3,
+      "metrics": {
+        "avg_fps": {
+          "after": 92.66666666666667,
+          "before": 120.0,
+          "change_pct": -22.777777777777775,
+          "regression": true
+        },
+        "crashes": {
+          "after": 0.3333333333333333,
+          "before": 0.0,
+          "change_pct": null,
+          "regression": false
+        },
+        "p95_frame_ms": {
+          "after": 15.0,
+          "before": 10.333333333333334,
+          "change_pct": 45.16129032258064,
+          "regression": true
+        },
+        "p95_ping_ms": {
+          "after": 36.0,
+          "before": 31.0,
+          "change_pct": 16.129032258064516,
+          "regression": true
+        }
+      },
+      "region": "NA",
+      "sufficient_samples": true
+    }
+  ],
+  "threshold_pct": 10.0
+}
