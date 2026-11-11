@@ -9,6 +9,7 @@ PatchPulse compares aggregate performance metrics before and after a game update
 Requires Python 3.10+ (standard library only).
 
 ```bash
+python -m pip install -e .
 python -m patchpulse --before examples/before.csv --after examples/after.csv --output report.json
 python -m unittest discover -s tests -v
 ```
