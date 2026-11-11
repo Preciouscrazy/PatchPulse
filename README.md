@@ -16,6 +16,10 @@ python -m unittest discover -s tests -v
 
 Input columns: `match_id,region,build,avg_fps,p95_frame_ms,p95_ping_ms,crashes`. Each row represents a match or session. Build and region are labels; comparisons are stratified by region, and match IDs are not included in reports.
 
+## Sample output
+
+[View the sample regression report](evidence/sample-report.json) generated from the included before and after CSV fixtures.
+
 ## Interpretation
 
 A positive change in p95 frame time, p95 ping, or crashes per session can indicate regression; a negative change in average FPS can indicate regression. Default thresholds are configurable. Minimum 3 observations per region in each cohort are required for a flag. Outputs are observational, not statistically causal. Use larger samples and controlled comparisons before making decisions.
