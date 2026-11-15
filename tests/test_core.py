@@ -74,7 +74,7 @@ class PatchPulseTests(unittest.TestCase):
 
     def test_threshold_zero_does_not_flag_unchanged_metrics(self):
         result = analyze([row()] * 3, [row()] * 3, threshold=0)
-        self.assertTrue(result["regions"][0]["metrics"]["avg_fps"]["regression"])
+        self.assertFalse(any(m["regression"] for m in result["regions"][0]["metrics"].values()))
 
     def test_reject_invalid_threshold(self):
         for value in (-1, math.nan, math.inf, -math.inf, True, "10", None):

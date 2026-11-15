@@ -117,7 +117,7 @@ def analyze(before, after, threshold=10.0, min_samples=3):
                 "before": old_avg, "after": new_avg, "change_pct": pct,
                 "regression": bool(
                     sufficient and (
-                        (worse is not None and worse >= threshold) or zero_baseline_worsened
+                        (worse is not None and worse > 0 and worse >= threshold) or zero_baseline_worsened
                     )
                 ),
             }
