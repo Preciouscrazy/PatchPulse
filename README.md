@@ -53,7 +53,7 @@ For each region, PatchPulse computes an arithmetic mean of each metric independe
 
 ## Validation and limitations
 
-The tests cover strict CSV parsing; non-finite and overflow inputs; cohort separation; threshold boundaries; the zero-baseline crash rule; missing samples; input/output collisions; CLI exit status; and **equality with the committed golden JSON**. GitHub Actions tests Python **3.10, 3.11, 3.12** on **Windows and Ubuntu**.
+The tests cover strict CSV parsing; non-finite and overflow inputs; cohort separation; threshold boundaries; the zero-baseline crash rule; missing samples; input/output collisions; CLI exit status; and **equality with the committed golden JSON**. GitHub Actions verified Python **3.10, 3.11, 3.12** on **Windows and Ubuntu** ([successful PR run](https://github.com/Preciouscrazy/PatchPulse/actions/runs/43695627978)).
 
 See [the verification record](evidence/validation.md) for exact hosted runs and supported evidence. This synthetic six-row fixture is too small to infer a real population effect. Region-level grouping alone does not control for hardware, game settings, skill, time of day, selection bias, network routes, or measurement quality. PatchPulse does not establish causality and should only process data the user owns or is authorized to analyze.
 

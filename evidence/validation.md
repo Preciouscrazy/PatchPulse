@@ -19,12 +19,17 @@ The upgrade defines **32 unit test methods** and **12 CLI subprocess test method
 
 The workflow installs PatchPulse and runs the entire suite on **Ubuntu 24.04 and Windows latest**, each with **Python 3.10, 3.11 and 3.12**. A hard-link test may be skipped if the environment does not support hard links; the remaining suite still runs.
 
+**Verified source commit:** [`2774ffadec9f28cb882f6b580b13414b3f784dbf`](https://github.com/Preciouscrazy/PatchPulse/commit/2774ffadec9f28cb882f6b580b13414b3f784dbf)  
+**Successful CI:** [PR run #43695627978](https://github.com/Preciouscrazy/PatchPulse/actions/runs/43695627978) · [Branch push run #43695616407](https://github.com/Preciouscrazy/PatchPulse/actions/runs/43695616407)
+
+Both runs completed successfully on the same source commit, testing the Python unit/CLI suite after an editable install.
+
 | Runner | Python 3.10 | Python 3.11 | Python 3.12 |
 | --- | --- | --- | --- |
-| Ubuntu 24.04 | Pending | Pending | Pending |
-| Windows latest | Pending | Pending | Pending |
+| Ubuntu 24.04 | **PASS** | **PASS** | **PASS** |
+| Windows latest | **PASS** | **PASS** | **PASS** |
 
-**The CI matrix remains pending until a successful GitHub-hosted run of the upgraded source is confirmed.** This file will be updated with checked run links and results.
+The verification concerns the cited commit. This document-only follow-up commit must pass its own workflow before its status is considered confirmed.
 
 ## Reproduce
 
